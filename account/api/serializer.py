@@ -36,7 +36,6 @@ class RegisterSerializer(serializers.ModelSerializer):
             password=validated_data.get('password'),
         )
         user_obj.is_staff = True
-        print("extra_data == ", extra_data)
         user_obj.profile.extra_data = extra_data
         user_obj.save()
         return user_obj

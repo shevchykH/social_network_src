@@ -4,44 +4,6 @@ from random import choice, randint
 from datetime import datetime
 import requests
 
-# idd = str(29)
-# URL = 'http://127.0.0.1:8000/api/account/signup/'
-# LOGIN_URL = 'http://127.0.0.1:8000/api/account/login/'
-# POST_URL = 'http://127.0.0.1:8000/api/posts/'
-# # PASSWORD = 'Test1234'
-# # URL3 = 'http://127.0.0.1:8000/api/posts/'
-# singup_data = {'email': 'test{}@gmail.com'.format(idd),
-#         'password': 'Test1234',
-#         'password2': 'Test1234',
-#         "username": "test{}".format(idd)
-#         }
-#
-# headers = {"Content-Type": "application/json"}
-# login_data = {"username": "test26", "password": "Test1234"}
-# r1 = requests.post(URL, data=json.dumps(singup_data), headers=headers)
-# print("r1 ==  ", r1)
-# print(r1.content)
-# r = requests.post(LOGIN_URL, data=json.dumps(login_data), headers=headers)
-# print(r.content)
-# token = r.json()['token']
-# headers['Authorization'] = 'JWT ' + token
-# post_data = {'title': 'Title1', 'content': 'Content1'}
-# r2 = requests.post(POST_URL, data=json.dumps(post_data), headers=headers)
-# print(r2.status_code)
-# print(r2.json())
-#
-# print("LIKE POSTS")
-# like_url = POST_URL + '15' + '/like'
-# r3 = requests.put(like_url, headers=headers)
-# print(r3.status_code)
-# print(token)
-#
-#
-# # token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTcwMTk0NzE3LCJqdGkiOiI3ZDZiNjcxNzYyNDk0YTBlYTY1NTZjMTc3YzQ0MWIxMyIsInVzZXJfaWQiOjE4fQ.iviYuUrZaqe3IaPlXWDrc1fkphHSK1qSnVFQzwEDVZI'
-# headers['Authorization'] = 'JWT ' + token
-# r2 = requests.get(URL3, headers=headers)
-# print(r2.content)
-
 
 class AutomatedBot:
     def __init__(self, host):
@@ -139,5 +101,3 @@ if __name__ == '__main__':
     for username in usernames:
         token = bot.login(username, config['user_password'])
         bot.like_post(token, config['max_likes_per_user'])
-
-# TODO 4 add requirements
